@@ -1,12 +1,13 @@
 import { Card, CardContent, Stack, Box, Typography, CardActions, Button, Modal, TextField, Divider, Grid, Menu, MenuItem, IconButton } from '@mui/material'
 import { FiMessageSquare, FiThumbsUp } from "react-icons/fi";
+import { FaEllipsisV } from "react-icons/fa";
 import { useState, useEffect } from 'react';
 import { useAuth } from '../context/authContext'
 
 import Comment from './Comment'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 const Post = ({ id, comment_arr, email_address, nama, content, like }) => {
 
@@ -79,7 +80,8 @@ const Post = ({ id, comment_arr, email_address, nama, content, like }) => {
                         <Typography sx={{ fontFamily: 'Comfortaa', fontWeight: 'bold' }}> { nama } </Typography>
                         <Box>
                             <IconButton onClick={handleAnchorEl}>
-                                <FontAwesomeIcon icon={solid('ellipsis-vertical')} style={{ color: 'gray', fontSize: 16 }} />
+                                <FaEllipsisV style={{ color: 'gray', fontSize: 16 }} />
+                                {/* <FontAwesomeIcon icon={solid('ellipsis-vertical')} style={{ color: 'gray', fontSize: 16 }} /> */}
                             </IconButton>
                             <Menu
                                 anchorEl={anchorEl}

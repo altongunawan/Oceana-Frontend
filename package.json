@@ -1,13 +1,13 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "homepage": "https://solavish.link/",
   "private": true,
   "dependencies": {
     "@carbon/react": "^1.5.0",
     "@carbon/styles": "^1.5.0",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@mui/material": "^5.8.5",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -19,6 +19,7 @@
     "carbon-icons": "^7.0.7",
     "dotenv": "^16.0.1",
     "formik": "^2.2.9",
+    "http": "0.0.1-security",
     "qs": "^6.10.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

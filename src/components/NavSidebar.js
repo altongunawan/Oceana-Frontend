@@ -4,8 +4,10 @@ import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+
+import { FaHome, FaSignOutAlt, FaRegComments, FaRegCommentDots, FaUserFriends, FaBookmark, FaCog, FaTimes } from "react-icons/fa";
 
 const Sidebar = () => {
 
@@ -39,7 +41,7 @@ const Sidebar = () => {
                 <Grid item>
                     <Link to="/user/homepage">
                         <IconButton sx={{ py: 2, px: 2, borderRadius: '16px' }} aria-label="delete">
-                            <FontAwesomeIcon icon={solid('message')} style={{ color: '#4062BB', fontSize: 16 }} />
+                            <FaRegCommentDots style={{ color: '#4062BB', fontSize: 16 }} />
                         </IconButton>
                     </Link>
                     <Divider />
@@ -47,48 +49,41 @@ const Sidebar = () => {
                 <Grid item sx={{ pt: 2 }}>
                     <Link to="/user/homepage">
                         <IconButton sx={{ py: 2, px: 2, borderRadius: '16px' }} aria-label="delete">
-                            <FontAwesomeIcon icon={solid('house')} style={{ color: 'lightgray', fontSize: 16 }} />
+                            <FaHome style={{ color: '#4062BB', fontSize: 16 }} />
                         </IconButton>
                     </Link>
                 </Grid>
                 <Grid item>
                     <Link to="/user/friend">
                         <IconButton sx={{ py: 2, px: 2, borderRadius: '16px' }} aria-label="delete">
-                            <FontAwesomeIcon icon={solid('user-group')} style={{ color: 'lightgray', fontSize: 16 }} />
+                            <FaUserFriends style={{ color: '#4062BB', fontSize: 16 }} />
                         </IconButton>
                     </Link>
                 </Grid>
                 <Grid item>
                     <Link to="/user/message">
-                        <IconButton sx={{ py: 2, px: 2, borderRadius: '16px' }} aria-label="delete">
-                            <FontAwesomeIcon icon={solid('message')} style={{ color: 'lightgray', fontSize: 16 }} />
-                        </IconButton>
-                    </Link>
-                </Grid>
-                <Grid item>
-                    <Link to="/user/notification">
-                        <IconButton sx={{ py: 2, px: 2, borderRadius: '16px' }} aria-label="delete">
-                            <FontAwesomeIcon icon={solid('bell')} style={{ color: 'lightgray', fontSize: 16 }} />
+                        <IconButton sx={{ py: 2, px: 2, borderRadius: '16px' }} aria-label="message">
+                            <FaRegComments style={{ color: '#4062BB', fontSize: 16 }} />
                         </IconButton>
                     </Link>
                 </Grid>
                 <Grid item>
                     <Link to="/user/bookmark">
                         <IconButton sx={{ py: 2, px: 2, borderRadius: '16px' }} aria-label="delete">
-                            <FontAwesomeIcon icon={solid('bookmark')} style={{ color: 'lightgray', fontSize: 16 }} />
+                            <FaBookmark style={{ color: '#4062BB', fontSize: 16 }} />
                         </IconButton>
                     </Link>
                 </Grid>
-                <Grid item>
+                {/* <Grid item>
                     <Link to="/user/setting">
                         <IconButton sx={{ py: 2, px: 2, borderRadius: '16px' }} aria-label="delete">
-                            <FontAwesomeIcon icon={solid('gear')} style={{ color: 'lightgray', fontSize: 16 }} />
+                            <FaCog style={{ color: '#4062BB', fontSize: 16 }} />
                         </IconButton>
                     </Link>
-                </Grid>
+                </Grid> */}
                 <Grid item>
                     <IconButton sx={{ py: 2, px: 2, borderRadius: '16px' }} aria-label="delete" onClick={handleModalLogOut}>
-                        <FontAwesomeIcon icon={solid('arrow-right-from-bracket')} style={{ color: 'lightgray', fontSize: 16 }} />
+                        <FaSignOutAlt style={{ color: '#4062BB', fontSize: 16 }} />
                     </IconButton>
                 </Grid>
             </Grid>
@@ -118,7 +113,8 @@ const Sidebar = () => {
                             Keluar dari Oceana
                         </Typography>
                         <IconButton aria-label="close-modal" onClick={handleCloseModalLogOut}>
-                            <FontAwesomeIcon icon={solid('xmark')} style={{ color: 'gray', fontSize: 16 }} />
+                            <FaTimes style={{ color: 'gray', fontSize: 16 }} />
+                            {/* <FontAwesomeIcon icon={solid('xmark')} style={{ color: 'gray', fontSize: 16 }} /> */}
                         </IconButton>
                     </Stack>
                     <Divider />

@@ -1,7 +1,8 @@
-import { Typography, Grid, Paper, TextField, InputAdornment } from '@mui/material'
+import { Typography, Grid, Paper, TextField, InputAdornment, Box } from '@mui/material'
+import { FaSearch } from "react-icons/fa";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 const RightSidebar = () => {
     return (
@@ -22,11 +23,15 @@ const RightSidebar = () => {
                         style : { fontFamily: 'Comfortaa' },
                         startAdornment: (
                             <InputAdornment position="start">
-                                <FontAwesomeIcon icon={solid('magnifying-glass')} />
+                                <FaSearch />
+                                {/* <FontAwesomeIcon icon={solid('magnifying-glass')} /> */}
                             </InputAdornment>
                         ),
                     }} 
                 />
+                <Box>
+                    
+                </Box>
             </Grid>
         </Paper>
     );
