@@ -24,7 +24,7 @@ const AuthProvider = ({ children }) => {
     }, [])
     
     const axiosApi = require('axios').default
-    axiosApi.defaults.baseURL = 'http://192.168.8.100:4000/api'
+    axiosApi.defaults.baseURL = 'https://oceana-server.herokuapp.com/api'
         
     const addUserToLocalStorage = ({ user, token}) => {
         localStorage.setItem('user', JSON.stringify(user))
