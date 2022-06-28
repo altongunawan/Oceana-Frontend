@@ -50,7 +50,7 @@ const AuthProvider = ({ children }) => {
     }
 
     const authFetch = axios.create({
-        baseURL: 'http://192.168.8.100:4000/api',
+        baseURL: 'https://oceana-server.herokuapp.com/api',
     })
 
     const loadUserPosting = async () => {
